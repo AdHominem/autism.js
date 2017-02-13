@@ -1,3 +1,5 @@
+
+// NOT a functor. Functors need to be generic
 function stringFunctor(value, fn) {
 	return value.split("").map(char => String.fromCharCode(fn(char.charCodeAt(0)))).join("");
 }
