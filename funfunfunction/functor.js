@@ -1,7 +1,8 @@
+"use strict";
 
-// NOT a functor. Functors need to be generic
+// not really a functor since it's not generic!
 function stringFunctor(value, fn) {
-	return value.split("").map(char => String.fromCharCode(fn(char.charCodeAt(0)))).join("");
+    return value.split("").map((char) => String.fromCharCode(fn(char.charCodeAt(0)))).join("");
 }
 
-console.log(stringFunctor("ABC", value => value + 1));
+console.log(stringFunctor("ABC", (value) => value + 1));
